@@ -4,11 +4,10 @@
 [![License](https://img.shields.io/cocoapods/l/NetworkDetector.svg?style=flat)](https://cocoapods.org/pods/NetworkDetector)
 [![Platform](https://img.shields.io/cocoapods/p/NetworkDetector.svg?style=flat)](https://cocoapods.org/pods/NetworkDetector)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+* iOS 12
+* Swift 4.2
 
 ## Installation
 
@@ -17,6 +16,31 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'NetworkDetector'
+```
+
+## Example
+
+An example project is included with this repo. To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Usage
+
+```Swift
+let networkDetector = NetworkDetector()
+
+networkDetector.reachableHandler = {
+    print("Internet connection is active")
+}
+
+networkDetector.unreachableHandler = {
+    print("Internet connection is down")
+}
+
+do {
+    try networkDetector.startMonitoring()
+} catch let error {
+    print(error.localizedDescription)
+}
+
 ```
 
 ## Author
