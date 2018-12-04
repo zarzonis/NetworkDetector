@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NetworkDetector_Example' do
+  pod 'NetworkDetector', :path => '../'
+
+  target 'NetworkDetector_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
