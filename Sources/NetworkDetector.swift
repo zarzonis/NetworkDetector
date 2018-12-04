@@ -73,7 +73,7 @@ import Network
     }
     
     //MARK: - Public methods
-    func startMonitoring() throws {
+    public func startMonitoring() throws {
         guard let monitor = monitor else { throw NetworkDetectorError.InvalidNetworkDetector}
         guard !isMonitorRunning else { return }
         currentNetworkStatus = .reachable
@@ -81,7 +81,7 @@ import Network
         isMonitorRunning = true
     }
     
-    func stopMonitoring() {
+    public func stopMonitoring() {
         //Check if there is a monitor to stop and that it's not already stopped.
         guard let monitor = monitor, isMonitorRunning else { return }
         monitor.cancel()
@@ -93,7 +93,7 @@ import Network
     
     //This method returns true or false based on whether the network is reachable or not and nil if
     //the network detector has not started monitoring yet.
-    func isNetworkReachable() -> Bool? {
+    public func isNetworkReachable() -> Bool? {
         guard let currentNetworkStatus = currentNetworkStatus else { return nil }
         return currentNetworkStatus == .reachable
     }
