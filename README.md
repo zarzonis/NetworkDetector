@@ -4,6 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/NetworkDetector.svg?style=flat)](https://cocoapods.org/pods/NetworkDetector)
 [![Platform](https://img.shields.io/cocoapods/p/NetworkDetector.svg?style=flat)](https://cocoapods.org/pods/NetworkDetector)
 
+<p align="center"><img src ="icon.png" width="300px"/></p>
 
 ## Description
 
