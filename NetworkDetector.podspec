@@ -16,10 +16,12 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Spyros Zarzonis' => 'spyroszarzonis@gmail.com' }
   s.source           = { :git => 'https://github.com/zarzonis/NetworkDetector.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/zarzonis'
+  s.swift_version = '4.2'
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'NetworkDetector/Sources/**/*'
+  s.source_files = 'NetworkDetector/**/*.swift'
   
   s.framework    = 'Network'
 end

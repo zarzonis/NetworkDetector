@@ -1,6 +1,9 @@
 use_frameworks!
 
 target 'NetworkDetector_Example' do
+    
+  platform :ios, '12.0'
+  
   pod 'NetworkDetector', :path => '../'
 
   target 'NetworkDetector_Tests' do
