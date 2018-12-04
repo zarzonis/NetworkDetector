@@ -34,8 +34,8 @@ import Network
         }
     }
     
-    typealias ReachableHandler = (() -> Void)
-    typealias UnreachableHandler = (() -> Void)
+    public typealias ReachableHandler = (() -> Void)
+    public typealias UnreachableHandler = (() -> Void)
    
     private var monitor: NWPathMonitor?
     private var queue: DispatchQueue
@@ -49,10 +49,10 @@ import Network
     private var currentNetworkStatus: NetworkStatus?
     
     //The handlers that will be called on network status change
-    var reachableHandler: ReachableHandler?
-    var unreachableHandler: UnreachableHandler?
+    public var reachableHandler: ReachableHandler?
+    public var unreachableHandler: UnreachableHandler?
     
-    init(targetQueue: DispatchQueue? = nil ) {
+    public init(targetQueue: DispatchQueue? = nil ) {
         queue = DispatchQueue(label: "com.zarzonis.NetworkMonitor", qos: .default, target: targetQueue)
         monitor = NWPathMonitor()
         monitor?.pathUpdateHandler = { [unowned self] path in
