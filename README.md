@@ -5,9 +5,9 @@
 [![Platform](https://img.shields.io/cocoapods/p/NetworkDetector.svg?style=flat)](https://cocoapods.org/pods/NetworkDetector)
 
 
-## Requirements
-* iOS 12
-* Swift 4.2
+## Description
+
+NetworkDetector is a very simple library that detects network changes and calls a closure based on the network status. It is based on NWPathMonitor introduced in iOS 12 that aims to eliminate the usage of Reachability class used for so many years.
 
 ## Installation
 
@@ -42,6 +42,10 @@ do {
 }
 
 ```
+
+## Requirements
+* iOS 12
+* Swift 4.2
 
 ## Author
 
