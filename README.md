@@ -1,6 +1,5 @@
 # NetworkDetector
 
-[![CI Status](https://img.shields.io/travis/Spyros Zarzonis/NetworkDetector.svg?style=flat)](https://travis-ci.org/Spyros Zarzonis/NetworkDetector)
 [![Version](https://img.shields.io/cocoapods/v/NetworkDetector.svg?style=flat)](https://cocoapods.org/pods/NetworkDetector)
 [![License](https://img.shields.io/cocoapods/l/NetworkDetector.svg?style=flat)](https://cocoapods.org/pods/NetworkDetector)
 [![Platform](https://img.shields.io/cocoapods/p/NetworkDetector.svg?style=flat)](https://cocoapods.org/pods/NetworkDetector)
