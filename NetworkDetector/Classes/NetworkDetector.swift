@@ -40,9 +40,6 @@ import Network
     private var monitor: NWPathMonitor?
     private var queue: DispatchQueue
     
-    //A lock that is used to evaluate the new network status atomically.
-    private let lock = NSLock()
-    
     private var isMonitorRunning = false
     
     //Get the current network status. If the monitor did not start monitoring, the value of this property is nil.
@@ -56,12 +53,7 @@ import Network
         queue = DispatchQueue(label: "com.zarzonis.NetworkMonitor", qos: .default, target: targetQueue)
         monitor = NWPathMonitor()
         monitor?.pathUpdateHandler = { [unowned self] path in
-            defer {
-                self.lock.unlock()
-            }
-            self.lock.lock()
-            
-            
+        
             let newNetworkStatus = NetworkStatus.status(from: path.status)
             //The pathUpdateHandler of the NWPathMonitor can be called multiple times for the same newtork status
             //change, so we need to find out if the new network status is different that the current status.
