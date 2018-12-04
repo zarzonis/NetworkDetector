@@ -14,6 +14,7 @@
 		A93621B799914264BBD7EA46624659B7 /* Pods-NetworkDetector_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 687C89730839DA484D82A259DF3DBC51 /* Pods-NetworkDetector_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B005E14E68E89960936D172C6C73B6F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		B3FD082B3659B8AB0F7512396AD34C78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		B97F4F6921B728B4003A0595 /* NetworkDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F4F6821B728B4003A0595 /* NetworkDetector.swift */; };
 		B9EF972C4FA3D1062E27576F219316D9 /* Pods-NetworkDetector_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7F19F4678188828AE13645FBDA1B4 /* Pods-NetworkDetector_Tests-dummy.m */; };
 		F9945EF74E8B74108E7F78FC24436381 /* NetworkDetector-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FED1B327BFAFF1E27C6F0ED565D5 /* NetworkDetector-dummy.m */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		967D4BB65E6EEEEEA48F501D3577321A /* Pods-NetworkDetector_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NetworkDetector_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		A11770F29A1E7BFED0C4809C68B3C308 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A48C6CDF37D7A107953D710257E63038 /* Pods-NetworkDetector_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NetworkDetector_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B97F4F6821B728B4003A0595 /* NetworkDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDetector.swift; sourceTree = "<group>"; };
 		B9983944DCD374CD723BB0BB613EF983 /* Pods_NetworkDetector_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkDetector_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB845297703B90E7F4D7D11161355743 /* Pods-NetworkDetector_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NetworkDetector_Example-dummy.m"; sourceTree = "<group>"; };
 		C3D64EC0A2A18905D2B269FD656CE902 /* Pods-NetworkDetector_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetworkDetector_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		B97F4F6721B7269E003A0595 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B97F4F6821B728B4003A0595 /* NetworkDetector.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -326,6 +329,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					27E1EE6027465D5878AFA5E3FD1D4E91 = {
+						LastSwiftMigration = 1010;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -375,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97F4F6921B728B4003A0595 /* NetworkDetector.swift in Sources */,
 				F9945EF74E8B74108E7F78FC24436381 /* NetworkDetector-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -678,6 +687,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09623640ACB6661FEB9AE98DCC71E8D6 /* NetworkDetector.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -698,6 +708,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -709,6 +720,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09623640ACB6661FEB9AE98DCC71E8D6 /* NetworkDetector.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
