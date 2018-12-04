@@ -1,0 +1,16 @@
+PODS:
+  - NetworkDetector (0.1.0)
+
+DEPENDENCIES:
+  - NetworkDetector (from `../`)
+
+EXTERNAL SOURCES:
+  NetworkDetector:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NetworkDetector: f67120eea6f501af736b232bc77f4692db98d832
+
+PODFILE CHECKSUM: 032af9047c867c15f22e504670598364b42101e0
+
+COCOAPODS: 1.5.3

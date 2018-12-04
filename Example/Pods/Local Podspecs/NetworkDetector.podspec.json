@@ -1,0 +1,22 @@
+{
+  "name": "NetworkDetector",
+  "version": "0.1.0",
+  "summary": "A short description of NetworkDetector.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Spyros Zarzonis/NetworkDetector",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Spyros Zarzonis": "spyroszarzonis@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Spyros Zarzonis/NetworkDetector.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "NetworkDetector/Classes/**/*"
+}
