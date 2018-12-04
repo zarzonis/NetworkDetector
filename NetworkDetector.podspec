@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NetworkDetector'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A simple Swift class that detects network changes'
   s.description      = 'This CocoaPod detects network changes and calls a closure based on the network status.'
 
