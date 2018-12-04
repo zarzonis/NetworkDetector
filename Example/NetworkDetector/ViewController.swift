@@ -11,6 +11,8 @@ import NetworkDetector
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak private var networkStatusLabel: UILabel!
+    
     var networkDetector: NetworkDetector!
 
     override func viewDidLoad() {
@@ -19,12 +21,19 @@ class ViewController: UIViewController {
         
         networkDetector = NetworkDetector()
         
-        networkDetector.reachableHandler = {
-            print("Internet connection is active")
+        networkDetector.reachableHandler = { [weak self] in
+            DispatchQueue.main.async {
+                self?.networkStatusLabel.textColor = .green
+                self?.networkStatusLabel.text = "Internet connection is active"
+            }
+            
         }
         
-        networkDetector.unreachableHandler = {
-            print("Internet connection is down")
+        networkDetector.unreachableHandler = { [weak self] in
+            DispatchQueue.main.async {
+                self?.networkStatusLabel.textColor = .red
+                self?.networkStatusLabel.text = "Internet connection is down"
+            }
         }
         
         do {

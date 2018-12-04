@@ -96,11 +96,11 @@ import Network
     //or does nothing in case the network monitor did not yet started monitoring.
     private func runAppropriateHandlerForCurrentNetworkStatus() {
         guard let currentStatus = currentNetworkStatus else { return }
-        switch currentStatus {
-        case .reachable:
-            reachableHandler?()
-        case .unreachable:
-            unreachableHandler?()
+        
+        let handler = currentStatus == .reachable ? reachableHandler : unreachableHandler
+        
+        DispatchQueue.main.async {
+            handler?()
         }
     }
     
