@@ -11,7 +11,7 @@ import Network
 
 @available(iOS 12.0, *) public class NetworkDetector {
     
-    enum NetworkStatus: CustomStringConvertible {
+    public enum NetworkStatus: CustomStringConvertible {
         case reachable
         case unreachable
         
@@ -24,7 +24,7 @@ import Network
             }
         }
         
-        var description: String {
+        public var description: String {
             switch self {
             case .reachable:
                 return "Reachable"
@@ -39,6 +39,8 @@ import Network
    
     private var monitor: NWPathMonitor?
     private var queue: DispatchQueue
+    // The notification center on which "networkStatusChanged" events are being posted
+    public var notificationCenter: NotificationCenter = NotificationCenter.default
     
     private var isMonitorRunning = false
     
@@ -108,6 +110,10 @@ import Network
     private func invalidateMonitor() {
         monitor = nil
     }
+}
+
+public extension Notification.Name {
+    public static let networkStatusChanged = Notification.Name("networkStatusChanged")
 }
 
 @available(iOS 12.0, *) public enum NetworkDetectorError: Error, LocalizedError {
