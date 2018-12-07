@@ -11,25 +11,16 @@ import Network
 
 @available(iOS 12.0, *) public class NetworkDetector {
     
-    public enum NetworkStatus: CustomStringConvertible {
+    public enum Connection: CustomStringConvertible {
+        case none
         case reachable
-        case unreachable
-        
-        //Creates a NetworkStatus from a NWPath.Status
-        fileprivate static func status(from pathStatus: NWPath.Status) -> NetworkStatus {
-            if pathStatus == .satisfied {
-                return .reachable
-            } else {
-                return .unreachable
-            }
-        }
         
         public var description: String {
             switch self {
+            case .none:
+                return "No Connection"
             case .reachable:
-                return "Reachable"
-            case .unreachable:
-                return "Unreachable"
+                return "Active Connection"
             }
         }
     }
@@ -45,18 +36,32 @@ import Network
     private var isMonitorRunning = false
     
     //Get the current network status. If the monitor did not start monitoring, the value of this property is nil.
-    private var currentNetworkStatus: NetworkStatus?
+    private var currentNetworkStatus: NWPath.Status?
     
     //The handlers that will be called on network status change
     public var reachableHandler: ReachableHandler?
     public var unreachableHandler: UnreachableHandler?
+    
+    public var connection: Connection? {
+        switch currentNetworkStatus {
+        case .satisfied?:
+            return .reachable
+        default:
+            return .none
+        }
+    }
     
     public init(targetQueue: DispatchQueue? = nil ) {
         queue = DispatchQueue(label: "com.zarzonis.NetworkMonitor", qos: .default, target: targetQueue)
         monitor = NWPathMonitor()
         monitor?.pathUpdateHandler = { [unowned self] path in
         
-            let newNetworkStatus = NetworkStatus.status(from: path.status)
+            let newNetworkStatus = path.status
+            
+            if self.currentNetworkStatus == nil {
+                self.currentNetworkStatus = newNetworkStatus
+                return
+            }
             //The pathUpdateHandler of the NWPathMonitor can be called multiple times for the same newtork status
             //change, so we need to find out if the new network status is different that the current status.
             guard self.currentNetworkStatus != newNetworkStatus else { return }
@@ -70,7 +75,7 @@ import Network
     public func startMonitoring() throws {
         guard let monitor = monitor else { throw NetworkDetectorError.InvalidNetworkDetector}
         guard !isMonitorRunning else { return }
-        currentNetworkStatus = .reachable
+        currentNetworkStatus = NWPath.Status.satisfied
         monitor.start(queue: queue)
         isMonitorRunning = true
     }
@@ -85,21 +90,12 @@ import Network
         isMonitorRunning = false
     }
     
-    //This method returns true or false based on whether the network is reachable or not and nil if
-    //the network detector has not started monitoring yet.
-    public func isNetworkReachable() -> Bool? {
-        guard let currentNetworkStatus = currentNetworkStatus else { return nil }
-        return currentNetworkStatus == .reachable
-    }
-    
     //MARK: - Private methods
     
     //This method runs the reachableHandler or the unreachableHandler based on the current network status,
     //or does nothing in case the network monitor did not yet started monitoring.
     private func runAppropriateHandlerForCurrentNetworkStatus() {
-        guard let currentStatus = currentNetworkStatus else { return }
-        
-        let handler = currentStatus == .reachable ? reachableHandler : unreachableHandler
+        let handler = connection != .none ? reachableHandler : unreachableHandler
         
         DispatchQueue.main.async {
             handler?()
