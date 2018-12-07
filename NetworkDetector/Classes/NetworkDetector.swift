@@ -71,6 +71,10 @@ import Network
         }
     }
     
+    deinit {
+        stopMonitoring()
+    }
+    
     //MARK: - Public methods
     public func startMonitoring() throws {
         guard let monitor = monitor else { throw NetworkDetectorError.InvalidNetworkDetector}
