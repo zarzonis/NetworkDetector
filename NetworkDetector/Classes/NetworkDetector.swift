@@ -34,6 +34,7 @@ import Network
     public var notificationCenter: NotificationCenter = NotificationCenter.default
     
     private var isMonitorRunning = false
+    private var isMonitorInvalid = false
     
     //Get the current network status. If the monitor did not start monitoring, the value of this property is nil.
     private var currentNetworkStatus: NWPath.Status?
@@ -78,6 +79,7 @@ import Network
     
     //MARK: - Public methods
     public func startMonitoring() throws {
+        guard !isMonitorInvalid else { throw NetworkDetectorError.InvalidNetworkDetector }
         guard !isMonitorRunning else { return }
         monitor.start(queue: queue)
         isMonitorRunning = true
@@ -88,6 +90,7 @@ import Network
         guard isMonitorRunning else { return }
         monitor.cancel()
         isMonitorRunning = false
+        isMonitorInvalid = true
     }
     
     //MARK: - Private methods
