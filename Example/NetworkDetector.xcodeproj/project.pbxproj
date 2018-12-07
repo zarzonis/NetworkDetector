@@ -10,11 +10,12 @@
 		314B2F84B9723349E1E68F37 /* Pods_NetworkDetector_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ECC9DFFBC9431005D27002 /* Pods_NetworkDetector_Tests.framework */; };
 		35D2597644B34D17211CB2F9 /* Pods_NetworkDetector_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1CA8F40FBDA8DBA87B6152 /* Pods_NetworkDetector_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		B90F15AE21BAAF3000E9BCA0 /* ClosuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F15AD21BAAF3000E9BCA0 /* ClosuresViewController.swift */; };
+		B90F15B021BAAFEC00E9BCA0 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F15AF21BAAFEC00E9BCA0 /* NotificationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +35,6 @@
 		607FACD01AFB9204008FA782 /* NetworkDetector_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkDetector_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -44,6 +44,8 @@
 		7E1CA8F40FBDA8DBA87B6152 /* Pods_NetworkDetector_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkDetector_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B81F86B1FFED6B67E069CA3 /* NetworkDetector.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NetworkDetector.podspec; path = ../NetworkDetector.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5583A3B03B91133FECBBA53 /* Pods-NetworkDetector_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDetector_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkDetector_Tests/Pods-NetworkDetector_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B90F15AD21BAAF3000E9BCA0 /* ClosuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosuresViewController.swift; sourceTree = "<group>"; };
+		B90F15AF21BAAFEC00E9BCA0 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		CE4BC9CFD063575A5F9F3FDD /* Pods-NetworkDetector_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDetector_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkDetector_Example/Pods-NetworkDetector_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E38D6974E551E010A3ED9A54 /* Pods-NetworkDetector_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDetector_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkDetector_Tests/Pods-NetworkDetector_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F59E7A3A40ACDD41BDD2C471 /* Pods-NetworkDetector_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDetector_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkDetector_Example/Pods-NetworkDetector_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,7 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				B90F15AD21BAAF3000E9BCA0 /* ClosuresViewController.swift */,
+				B90F15AF21BAAFEC00E9BCA0 /* NotificationsViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -334,8 +337,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				B90F15AE21BAAF3000E9BCA0 /* ClosuresViewController.swift in Sources */,
+				B90F15B021BAAFEC00E9BCA0 /* NotificationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="du9-Vv-L2b">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,16 +20,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="I8Y-3i-VcS">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Egp-lB-oNl">
+                                <rect key="frame" x="16" y="303.5" width="343" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBs-KC-mUX">
+                                        <rect key="frame" x="64" y="0.0" width="215" height="30"/>
+                                        <state key="normal" title="NetworkDetector with Closures"/>
+                                        <connections>
+                                            <segue destination="6pc-Uf-aii" kind="show" id="Db4-xN-9qs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXi-hm-jHN">
+                                        <rect key="frame" x="51" y="30" width="241" height="30"/>
+                                        <state key="normal" title="NetworkDetector with Notifications"/>
+                                        <connections>
+                                            <segue destination="OM7-o9-2kE" kind="show" id="pg1-Pl-gpR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Egp-lB-oNl" secondAttribute="trailing" constant="16" id="5PM-n6-tez"/>
+                            <constraint firstItem="Egp-lB-oNl" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="VqU-L4-RuA"/>
+                            <constraint firstItem="Egp-lB-oNl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="sAd-H2-DsT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fFV-wj-V03"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.2" y="17.541229385307346"/>
+        </scene>
+        <!--Closures-->
+        <scene sceneID="Mab-hF-RYH">
+            <objects>
+                <viewController title="Closures" id="6pc-Uf-aii" customClass="ClosuresViewController" customModule="NetworkDetector_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZRG-tk-JIh"/>
+                        <viewControllerLayoutGuide type="bottom" id="VUe-6l-6c1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bMd-6O-jV6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Zzj-dC-mng">
                                 <rect key="frame" x="16" y="304.5" width="343" height="58.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toggle the WiFi or the LTE on and off and notice the network status changes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0h-TH-C3u">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toggle the WiFi or the LTE on and off and notice the network status changes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCK-Iz-pAP">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="42.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAo-d8-vsv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iva-GV-dmD">
                                         <rect key="frame" x="0.0" y="58.5" width="343" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -38,19 +83,83 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="I8Y-3i-VcS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="C6I-YC-UWZ"/>
-                            <constraint firstAttribute="trailing" secondItem="I8Y-3i-VcS" secondAttribute="trailing" constant="16" id="W67-rO-3UT"/>
-                            <constraint firstItem="I8Y-3i-VcS" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="XiX-Me-psw"/>
+                            <constraint firstItem="Zzj-dC-mng" firstAttribute="leading" secondItem="bMd-6O-jV6" secondAttribute="leading" constant="16" id="VYd-yG-chA"/>
+                            <constraint firstAttribute="trailing" secondItem="Zzj-dC-mng" secondAttribute="trailing" constant="16" id="YT0-g9-ae3"/>
+                            <constraint firstItem="Zzj-dC-mng" firstAttribute="centerY" secondItem="bMd-6O-jV6" secondAttribute="centerY" id="j9q-f0-CGz"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="networkStatusLabel" destination="eAo-d8-vsv" id="zXN-Tk-EQd"/>
+                        <outlet property="networkStatusLabel" destination="Iva-GV-dmD" id="TeT-wc-VIz"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ydH-Uz-4xO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1848.8" y="-420.53973013493254"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="7jC-sa-eCi">
+            <objects>
+                <viewController title="Notifications" id="OM7-o9-2kE" customClass="NotificationsViewController" customModule="NetworkDetector_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6AJ-q0-QGw"/>
+                        <viewControllerLayoutGuide type="bottom" id="s1c-b0-E7C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WVB-45-gZd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rfD-5Y-1bI">
+                                <rect key="frame" x="16" y="304.5" width="343" height="58.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toggle the WiFi or the LTE on and off and notice the network status changes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zv-LI-WZ7">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="42.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwX-cu-IMO">
+                                        <rect key="frame" x="0.0" y="58.5" width="343" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rfD-5Y-1bI" secondAttribute="trailing" constant="16" id="2xt-sN-6aL"/>
+                            <constraint firstItem="rfD-5Y-1bI" firstAttribute="centerY" secondItem="WVB-45-gZd" secondAttribute="centerY" id="Lgo-my-VCH"/>
+                            <constraint firstItem="rfD-5Y-1bI" firstAttribute="leading" secondItem="WVB-45-gZd" secondAttribute="leading" constant="16" id="R49-Ex-TSd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="networkStatusLabel" destination="EwX-cu-IMO" id="uef-bz-byB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3c-dF-bBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1848.8" y="314.39280359820094"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F2z-PM-UCV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="du9-Vv-L2b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="88L-ik-2WK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="BvU-i2-E71"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emq-Og-1G3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="17.541229385307346"/>
         </scene>
     </scenes>
 </document>
