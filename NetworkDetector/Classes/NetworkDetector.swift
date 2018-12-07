@@ -67,7 +67,7 @@ import Network
             guard self.currentNetworkStatus != newNetworkStatus else { return }
             
             self.currentNetworkStatus = newNetworkStatus
-            self.runAppropriateHandlerForCurrentNetworkStatus()
+            self.networkStatusChanged()
         }
     }
     
@@ -94,7 +94,7 @@ import Network
     
     //This method runs the reachableHandler or the unreachableHandler based on the current network status,
     //or does nothing in case the network monitor did not yet started monitoring.
-    private func runAppropriateHandlerForCurrentNetworkStatus() {
+    private func networkStatusChanged() {
         let handler = connection != .none ? reachableHandler : unreachableHandler
         
         DispatchQueue.main.async {
