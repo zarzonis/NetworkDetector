@@ -20,20 +20,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         networkDetector = NetworkDetector()
-        
-        networkDetector.reachableHandler = { [weak self] in
-            DispatchQueue.main.async {
-                self?.networkStatusLabel.textColor = .green
-                self?.networkStatusLabel.text = "Internet connection is active"
-            }
-            
+        networkDetector.reachableHandler = {
+            self.updateLabelForReachableInternetConnection()
         }
         
-        networkDetector.unreachableHandler = { [weak self] in
-            DispatchQueue.main.async {
-                self?.networkStatusLabel.textColor = .red
-                self?.networkStatusLabel.text = "Internet connection is down"
-            }
+        networkDetector.unreachableHandler = {
+            self.updateLabelForNoInternetConnection()
         }
         
         do {
@@ -41,6 +33,16 @@ class ViewController: UIViewController {
         } catch let error {
             print(error.localizedDescription)
         }
+    }
+    
+    func updateLabelForReachableInternetConnection() {
+        networkStatusLabel.textColor = .green
+        networkStatusLabel.text = "Internet connection is active"
+    }
+    
+    func updateLabelForNoInternetConnection() {
+        networkStatusLabel.textColor = .red
+        networkStatusLabel.text = "Internet connection is down"
     }
 }
 
