@@ -28,7 +28,7 @@ import Network
     public typealias ReachableHandler = (() -> Void)
     public typealias UnreachableHandler = (() -> Void)
    
-    private var monitor: NWPathMonitor?
+    private var monitor: NWPathMonitor
     private var queue: DispatchQueue
     // The notification center on which "networkStatusChanged" events are being posted
     public var notificationCenter: NotificationCenter = NotificationCenter.default
@@ -42,7 +42,7 @@ import Network
     public var reachableHandler: ReachableHandler?
     public var unreachableHandler: UnreachableHandler?
     
-    public var connection: Connection? {
+    public var connection: Connection {
         switch currentNetworkStatus {
         case .satisfied?:
             return .reachable
@@ -54,16 +54,17 @@ import Network
     public init(targetQueue: DispatchQueue? = nil ) {
         queue = DispatchQueue(label: "com.zarzonis.NetworkMonitor", qos: .default, target: targetQueue)
         monitor = NWPathMonitor()
-        monitor?.pathUpdateHandler = { [unowned self] path in
-        
+        monitor.pathUpdateHandler = { [unowned self] path in
             let newNetworkStatus = path.status
             
+            //Set the initial network status without calling networkStatusChanged()
             if self.currentNetworkStatus == nil {
                 self.currentNetworkStatus = newNetworkStatus
                 return
             }
-            //The pathUpdateHandler of the NWPathMonitor can be called multiple times for the same newtork status
-            //change, so we need to find out if the new network status is different that the current status.
+            
+            //Save the new network status and call networkStatusChanged() only if it's different that the
+            //current network status
             guard self.currentNetworkStatus != newNetworkStatus else { return }
             
             self.currentNetworkStatus = newNetworkStatus
@@ -77,38 +78,32 @@ import Network
     
     //MARK: - Public methods
     public func startMonitoring() throws {
-        guard let monitor = monitor else { throw NetworkDetectorError.InvalidNetworkDetector}
         guard !isMonitorRunning else { return }
-        currentNetworkStatus = NWPath.Status.satisfied
         monitor.start(queue: queue)
         isMonitorRunning = true
     }
     
     public func stopMonitoring() {
-        //Check if there is a monitor to stop and that it's not already stopped.
-        guard let monitor = monitor, isMonitorRunning else { return }
+        //Check if the monitor it's not already stopped.
+        guard isMonitorRunning else { return }
         monitor.cancel()
-        
-        //Invalidate monitor
-        invalidateMonitor()
         isMonitorRunning = false
     }
     
     //MARK: - Private methods
     
     //This method runs the reachableHandler or the unreachableHandler based on the current network status,
-    //or does nothing in case the network monitor did not yet started monitoring.
+    //if the network status is set. Otherwise it does nothing.
     private func networkStatusChanged() {
-        let handler = connection != .none ? reachableHandler : unreachableHandler
         
-        DispatchQueue.main.async {
+        guard let currentNetworkStatus = currentNetworkStatus else { return }
+        
+        let handler = currentNetworkStatus == .satisfied ? reachableHandler : unreachableHandler
+        
+        DispatchQueue.main.async { [weak self] in
             handler?()
+            self?.notificationCenter.post(name: .networkStatusChanged, object: self)
         }
-    }
-    
-    //Monitor can't be started again if stopped, so we need to set it to nil in order to avoid further usage
-    private func invalidateMonitor() {
-        monitor = nil
     }
 }
 
