@@ -48,10 +48,6 @@ do {
 * iOS 12
 * Swift 4.2
 
-## Coming soon
-
-* Notifications
-
 ## Want to help?
 
 Got a bug fix, or a new feature? You are more than welcome to create a pull request.
