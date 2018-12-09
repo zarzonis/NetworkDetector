@@ -1,0 +1,6 @@
+framework module NetworkDetector {
+  umbrella header "NetworkDetector-tvOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
