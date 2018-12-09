@@ -47,7 +47,41 @@ do {
     print(error.localizedDescription)
 }
 ```
-and for stopping notifications
+and for stopping monitoring
+```swift
+networkDetector.stopMonitoring()
+```
+
+### Notifications
+
+NOTE: All notifications are delivered on the  **main queue**.
+
+```Swift
+//declare this property where it won't go out of scope relative to your listener
+let networkDetector = NetworkDetector()
+
+NotificationCenter.default.addObserver(self, selector: #selector(networkStatusChanged(_:)), name: .networkStatusChanged, object: networkDetector)
+
+do {
+    try networkDetector.startMonitoring()
+} catch let error {
+    print(error.localizedDescription)
+}
+```
+and
+```Swift
+@objc private func networkStatusChanged(_ note: Notification) {
+    let networkDetector = note.object as! NetworkDetector
+
+    switch networkDetector.connection {
+        case .reachable:
+            print("The network is reachable")
+        case .none:
+            print("Network not reachable")
+    }
+}
+````
+and for stopping monitoring
 ```swift
 networkDetector.stopMonitoring()
 ```
