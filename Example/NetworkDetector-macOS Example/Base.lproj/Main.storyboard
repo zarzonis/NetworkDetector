@@ -766,7 +766,7 @@
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ETZ-CT-oWg">
                                         <rect key="frame" x="-2" y="33" width="422" height="34"/>
-                                        <textFieldCell key="cell" selectable="YES" alignment="center" title="Toggle the WiFi or the LTE on and off and notice the network status changes" id="GpJ-Oe-vmh">
+                                        <textFieldCell key="cell" selectable="YES" alignment="center" title="Toggle the WiFi on and off or unplug the Ethernet cable and notice the network status changes" id="GpJ-Oe-vmh">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -818,7 +818,7 @@
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="laz-Cl-5Vq">
                                         <rect key="frame" x="-2" y="33" width="422" height="34"/>
-                                        <textFieldCell key="cell" selectable="YES" alignment="center" title="Toggle the WiFi or the LTE on and off and notice the network status changes" id="LRL-Mu-phv">
+                                        <textFieldCell key="cell" selectable="YES" alignment="center" title="Toggle the WiFi on and off or unplug the Ethernet cable and notice the network status changes" id="LRL-Mu-phv">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
