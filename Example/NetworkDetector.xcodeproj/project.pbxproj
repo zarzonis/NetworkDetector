@@ -20,9 +20,9 @@
 		B96B19CA21BD7EC70055C56A /* ClosuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96B19C921BD7EC70055C56A /* ClosuresViewController.swift */; };
 		B96B19CC21BD7EC70055C56A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B96B19CB21BD7EC70055C56A /* Assets.xcassets */; };
 		B96B19CF21BD7EC70055C56A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96B19CD21BD7EC70055C56A /* Main.storyboard */; };
+		B97A57C821BD9D9400E0FCE2 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A57C721BD9D9400E0FCE2 /* NotificationsViewController.swift */; };
 		B9C03AE721BD870100B1BD1C /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C03AE621BD870100B1BD1C /* NotificationsViewController.swift */; };
 		B9C03AEF21BD990C00B1BD1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C03AEE21BD990C00B1BD1C /* AppDelegate.swift */; };
-		B9C03AF121BD990C00B1BD1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C03AF021BD990C00B1BD1C /* ViewController.swift */; };
 		B9C03AF421BD990C00B1BD1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C03AF221BD990C00B1BD1C /* Main.storyboard */; };
 		B9C03AFC21BD99FA00B1BD1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C03AFB21BD99FA00B1BD1C /* Images.xcassets */; };
 		B9C03AFE21BD9B4800B1BD1C /* ClosuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C03AFD21BD9B4800B1BD1C /* ClosuresViewController.swift */; };
@@ -74,10 +74,10 @@
 		B96B19CE21BD7EC70055C56A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B96B19D021BD7EC70055C56A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96B19D121BD7EC70055C56A /* NetworkDetector_macOS_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkDetector_macOS_Example.entitlements; sourceTree = "<group>"; };
+		B97A57C721BD9D9400E0FCE2 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		B9C03AE621BD870100B1BD1C /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		B9C03AEC21BD990C00B1BD1C /* NetworkDetector_tvOS_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkDetector_tvOS_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C03AEE21BD990C00B1BD1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9C03AF021BD990C00B1BD1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B9C03AF321BD990C00B1BD1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9C03AF721BD990D00B1BD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C03AFB21BD99FA00B1BD1C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -228,9 +228,9 @@
 			isa = PBXGroup;
 			children = (
 				B9C03AEE21BD990C00B1BD1C /* AppDelegate.swift */,
-				B9C03AF021BD990C00B1BD1C /* ViewController.swift */,
 				B9C03AF221BD990C00B1BD1C /* Main.storyboard */,
 				B9C03AFD21BD9B4800B1BD1C /* ClosuresViewController.swift */,
+				B97A57C721BD9D9400E0FCE2 /* NotificationsViewController.swift */,
 				B9C03AFB21BD99FA00B1BD1C /* Images.xcassets */,
 				B9C03AF721BD990D00B1BD1C /* Info.plist */,
 			);
@@ -638,7 +638,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9C03AF121BD990C00B1BD1C /* ViewController.swift in Sources */,
+				B97A57C821BD9D9400E0FCE2 /* NotificationsViewController.swift in Sources */,
 				B9C03AEF21BD990C00B1BD1C /* AppDelegate.swift in Sources */,
 				B9C03AFE21BD9B4800B1BD1C /* ClosuresViewController.swift in Sources */,
 			);

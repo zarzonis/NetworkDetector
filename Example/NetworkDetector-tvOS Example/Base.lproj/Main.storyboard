@@ -37,6 +37,9 @@
                                         <rect key="frame" x="0.0" y="102" width="683" height="86"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" title="NetworkDetector with Notifications"/>
+                                        <connections>
+                                            <segue destination="PlM-S1-LPh" kind="show" id="dbi-50-2Ow"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -95,7 +98,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CqY-pv-WeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2195" y="-930"/>
+            <point key="canvasLocation" x="2568" y="-243"/>
+        </scene>
+        <!--Notifications View Controller-->
+        <scene sceneID="Uve-f5-ncW">
+            <objects>
+                <viewController id="PlM-S1-LPh" customClass="NotificationsViewController" customModule="NetworkDetector_tvOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1sl-6M-E1b"/>
+                        <viewControllerLayoutGuide type="bottom" id="ycn-Bf-lly"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="52J-gd-cVf">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QSV-11-74o">
+                                <rect key="frame" x="106" y="454" width="1740" height="172"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toggle the WiFi on and off or unplug the Ethernet cable and notice the network status changes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPX-J6-a9O">
+                                        <rect key="frame" x="0.0" y="0.0" width="1740" height="114"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tla-Bi-Vpx">
+                                        <rect key="frame" x="0.0" y="122" width="1740" height="50"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="QSV-11-74o" firstAttribute="trailing" secondItem="9ts-XP-C1V" secondAttribute="trailing" constant="16" id="QRz-9f-ivu"/>
+                            <constraint firstItem="QSV-11-74o" firstAttribute="centerY" secondItem="9ts-XP-C1V" secondAttribute="centerY" id="a9L-es-pfk"/>
+                            <constraint firstItem="QSV-11-74o" firstAttribute="leading" secondItem="9ts-XP-C1V" secondAttribute="leading" constant="16" id="qZE-hc-dfs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9ts-XP-C1V"/>
+                    </view>
+                    <connections>
+                        <outlet property="networkStatusLabel" destination="Tla-Bi-Vpx" id="QUg-mF-PM2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eg9-lK-7dd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2568" y="1550"/>
         </scene>
     </scenes>
 </document>
