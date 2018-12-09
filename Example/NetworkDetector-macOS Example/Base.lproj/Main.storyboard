@@ -753,10 +753,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
-        <!--Closures View Controller-->
+        <!--Closures-->
         <scene sceneID="sb9-xC-c6O">
             <objects>
-                <viewController id="i3v-VA-6oq" customClass="ClosuresViewController" customModule="NetworkDetector_macOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Closures" id="i3v-VA-6oq" customClass="ClosuresViewController" customModule="NetworkDetector_macOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="0vT-lg-CV8">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -803,12 +803,12 @@
                 </viewController>
                 <customObject id="OmS-5V-H2o" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="512"/>
+            <point key="canvasLocation" x="662" y="525"/>
         </scene>
-        <!--Notifications View Controller-->
+        <!--Notifications-->
         <scene sceneID="Dxo-TA-IAI">
             <objects>
-                <viewController id="P19-MY-LAQ" customClass="NotificationsViewController" customModule="NetworkDetector_macOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Notifications" id="P19-MY-LAQ" customClass="NotificationsViewController" customModule="NetworkDetector_macOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="bui-9I-HsP">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="301"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -855,7 +855,7 @@
                 </viewController>
                 <customObject id="ZqC-JJ-V2e" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="906"/>
+            <point key="canvasLocation" x="662" y="884"/>
         </scene>
     </scenes>
 </document>
