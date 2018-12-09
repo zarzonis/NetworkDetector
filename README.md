@@ -88,6 +88,7 @@ networkDetector.stopMonitoring()
 
 ## Requirements
 * iOS 12
+* macOS 10.14
 * Swift 4.2
 
 ## Want to help?
