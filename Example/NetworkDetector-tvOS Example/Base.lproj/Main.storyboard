@@ -55,10 +55,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Closures View Controller-->
+        <!--Closures-->
         <scene sceneID="U9X-51-U9w">
             <objects>
-                <viewController id="dLd-6k-aog" customClass="ClosuresViewController" customModule="NetworkDetector_tvOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Closures" id="dLd-6k-aog" customClass="ClosuresViewController" customModule="NetworkDetector_tvOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tcz-4g-TQ7"/>
                         <viewControllerLayoutGuide type="bottom" id="ntv-T7-3j8"/>
@@ -98,12 +98,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CqY-pv-WeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2568" y="-243"/>
+            <point key="canvasLocation" x="2568" y="399"/>
         </scene>
-        <!--Notifications View Controller-->
+        <!--Notifications-->
         <scene sceneID="Uve-f5-ncW">
             <objects>
-                <viewController id="PlM-S1-LPh" customClass="NotificationsViewController" customModule="NetworkDetector_tvOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Notifications" id="PlM-S1-LPh" customClass="NotificationsViewController" customModule="NetworkDetector_tvOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1sl-6M-E1b"/>
                         <viewControllerLayoutGuide type="bottom" id="ycn-Bf-lly"/>
@@ -143,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eg9-lK-7dd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2568" y="1550"/>
+            <point key="canvasLocation" x="2568" y="2029"/>
         </scene>
     </scenes>
 </document>
