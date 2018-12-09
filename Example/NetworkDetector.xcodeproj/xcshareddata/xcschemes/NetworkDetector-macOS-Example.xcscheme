@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B96B19C421BD7EC70055C56A"
-               BuildableName = "NetworkDetector-macOS_Example.app"
-               BlueprintName = "NetworkDetector-macOS_Example"
+               BuildableName = "NetworkDetector_macOS_Example.app"
+               BlueprintName = "NetworkDetector_macOS_Example"
                ReferencedContainer = "container:NetworkDetector.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B96B19C421BD7EC70055C56A"
-            BuildableName = "NetworkDetector-macOS_Example.app"
-            BlueprintName = "NetworkDetector-macOS_Example"
+            BuildableName = "NetworkDetector_macOS_Example.app"
+            BlueprintName = "NetworkDetector_macOS_Example"
             ReferencedContainer = "container:NetworkDetector.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B96B19C421BD7EC70055C56A"
-            BuildableName = "NetworkDetector-macOS_Example.app"
-            BlueprintName = "NetworkDetector-macOS_Example"
+            BuildableName = "NetworkDetector_macOS_Example.app"
+            BlueprintName = "NetworkDetector_macOS_Example"
             ReferencedContainer = "container:NetworkDetector.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B96B19C421BD7EC70055C56A"
-            BuildableName = "NetworkDetector-macOS_Example.app"
-            BlueprintName = "NetworkDetector-macOS_Example"
+            BuildableName = "NetworkDetector_macOS_Example.app"
+            BlueprintName = "NetworkDetector_macOS_Example"
             ReferencedContainer = "container:NetworkDetector.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

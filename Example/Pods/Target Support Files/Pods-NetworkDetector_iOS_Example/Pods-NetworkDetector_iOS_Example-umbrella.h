@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_NetworkDetector_ExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_NetworkDetector_ExampleVersionString[];
+FOUNDATION_EXPORT double Pods_NetworkDetector_iOS_ExampleVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_NetworkDetector_iOS_ExampleVersionString[];
 

@@ -1,8 +1,8 @@
 {
   "name": "NetworkDetector",
-  "version": "0.1.0",
-  "summary": "A simple Swift class that detects network changes",
-  "description": "This CocoaPod detects network changes and calls a closure based on the network status.",
+  "version": "0.2.0",
+  "summary": "A simple iOS library written in Swift that detects network changes.",
+  "description": "This CocoaPod library detects network changes and calls a closure or broadcasts a notification based on the network status. It uses NWPathMonitor under the hood.",
   "homepage": "https://github.com/zarzonis/NetworkDetector",
   "license": {
     "type": "MIT",
@@ -13,12 +13,14 @@
   },
   "source": {
     "git": "https://github.com/zarzonis/NetworkDetector.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
-  "swift_version": "4.0",
+  "social_media_url": "https://twitter.com/zarzonis",
+  "swift_version": "4.2",
   "platforms": {
-    "ios": "12.0"
+    "ios": "12.0",
+    "osx": "10.14"
   },
-  "source_files": "Sources/NetworkDetector.swift",
+  "source_files": "NetworkDetector/**/*.swift",
   "frameworks": "Network"
 }

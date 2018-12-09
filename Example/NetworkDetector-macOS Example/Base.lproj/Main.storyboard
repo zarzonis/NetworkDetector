@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="NetworkDetector_macOS_Example" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -703,15 +704,116 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="NetworkDetector_macOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="12" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7b-AH-Eng">
+                                <rect key="frame" x="120" y="108" width="241" height="54"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a0g-DO-IXc">
+                                        <rect key="frame" x="5" y="26" width="230" height="32"/>
+                                        <buttonCell key="cell" type="push" title="NetworkDetector with Closures" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BqO-vV-Kv7">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <segue destination="i3v-VA-6oq" kind="show" id="qnn-FN-qg2"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rSx-yi-17s">
+                                        <rect key="frame" x="-6" y="-7" width="253" height="32"/>
+                                        <buttonCell key="cell" type="push" title="NetworkDetector with Notifications" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wkg-L2-iub">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <segue destination="P19-MY-LAQ" kind="show" id="A8j-JS-2ha"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="d7b-AH-Eng" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="jF7-pR-Zql"/>
+                            <constraint firstItem="d7b-AH-Eng" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="lX7-of-rbb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+        <!--Closures View Controller-->
+        <scene sceneID="sb9-xC-c6O">
+            <objects>
+                <viewController id="i3v-VA-6oq" customClass="ClosuresViewController" customModule="NetworkDetector_macOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="0vT-lg-CV8">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rzK-qP-70P">
+                                <rect key="frame" x="14" y="142" width="422" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="Uyz-1q-EKn">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="rzK-qP-70P" firstAttribute="leading" secondItem="0vT-lg-CV8" secondAttribute="leading" constant="16" id="2hA-XI-IqL"/>
+                            <constraint firstItem="rzK-qP-70P" firstAttribute="centerY" secondItem="0vT-lg-CV8" secondAttribute="centerY" id="M7F-2F-KWw"/>
+                            <constraint firstAttribute="trailing" secondItem="rzK-qP-70P" secondAttribute="trailing" constant="16" id="Tsw-vf-ZJn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="networkStatusTextField" destination="rzK-qP-70P" id="dIK-WB-6Yj"/>
+                    </connections>
+                </viewController>
+                <customObject id="OmS-5V-H2o" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="512"/>
+        </scene>
+        <!--Notifications View Controller-->
+        <scene sceneID="Dxo-TA-IAI">
+            <objects>
+                <viewController id="P19-MY-LAQ" customClass="NotificationsViewController" customModule="NetworkDetector_macOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="pzj-b6-zqx">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZH3-y9-lEf">
+                                <rect key="frame" x="9" y="142" width="422" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="tCN-JN-UCD">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZH3-y9-lEf" secondAttribute="trailing" constant="21" id="Wyl-Ug-8kO"/>
+                            <constraint firstItem="ZH3-y9-lEf" firstAttribute="leading" secondItem="pzj-b6-zqx" secondAttribute="leading" constant="11" id="q62-pA-Q7J"/>
+                            <constraint firstItem="ZH3-y9-lEf" firstAttribute="centerY" secondItem="pzj-b6-zqx" secondAttribute="centerY" id="qDe-db-UjV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="networkStatusTextField" destination="ZH3-y9-lEf" id="aEc-yH-JPr"/>
+                    </connections>
+                </viewController>
+                <customObject id="ZqC-JJ-V2e" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="883"/>
         </scene>
     </scenes>
 </document>

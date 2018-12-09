@@ -1,14 +1,19 @@
 use_frameworks!
 
-target 'NetworkDetector_Example' do
+target 'NetworkDetector_iOS_Example' do
     
   platform :ios, '12.0'
   
   pod 'NetworkDetector', :path => '../'
+end
 
-  target 'NetworkDetector_Tests' do
-    inherit! :search_paths
-
+target 'NetworkDetector_macOS_Example' do
     
-  end
+  platform :osx, '10.14'
+  
+  pod 'NetworkDetector', :path => '../'
+end
+
+target 'NetworkDetector_Tests' do
+    inherit! :search_paths    
 end
