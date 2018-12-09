@@ -495,7 +495,7 @@
 				INFOPLIST_FILE = NetworkDetector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.zarzonis.NetworkDetector-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.zarzonis.NetworkDetector-iOSExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -510,7 +510,7 @@
 				INFOPLIST_FILE = NetworkDetector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.zarzonis.NetworkDetector-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.zarzonis.NetworkDetector-iOSExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
