@@ -8,9 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NetworkDetector'
-  s.version          = '0.2.0'
-  s.summary          = 'A simple iOS library written in Swift that detects network changes.'
-  s.description      = 'This CocoaPod library detects network changes and calls a closure or broadcasts a notification based on the network status. It uses NWPathMonitor under the hood.'
+  s.version          = '0.3.0'
+  s.summary          = 'A simple library written in Swift that detects network changes.'
+  s.description      = 'NetworkDetector detects network changes and calls a closure or broadcasts a notification based on the network status. It uses NWPathMonitor under the hood.'
 
   s.homepage         = 'https://github.com/zarzonis/NetworkDetector'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
