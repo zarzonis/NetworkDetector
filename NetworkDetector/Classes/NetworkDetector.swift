@@ -104,8 +104,9 @@ import Network
         let handler = currentNetworkStatus == .satisfied ? reachableHandler : unreachableHandler
         
         DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             handler?()
-            self?.notificationCenter.post(name: .networkStatusChanged, object: self)
+            self.notificationCenter.post(name: .networkStatusChanged, object: self)
         }
     }
 }
