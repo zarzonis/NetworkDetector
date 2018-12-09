@@ -22,5 +22,6 @@
     "osx": "10.14"
   },
   "source_files": "NetworkDetector/**/*.swift",
-  "frameworks": "Network"
+  "frameworks": "Network",
+  "requires_arc": true
 }

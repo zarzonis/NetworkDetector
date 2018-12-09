@@ -15,5 +15,7 @@ target 'NetworkDetector_macOS_Example' do
 end
 
 target 'NetworkDetector_Tests' do
-    inherit! :search_paths    
+    inherit! :search_paths
+    
+    pod 'NetworkDetector', :path => '../'    
 end

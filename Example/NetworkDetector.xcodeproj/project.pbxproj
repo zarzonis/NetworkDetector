@@ -242,6 +242,7 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
+				160B3D378EEA8090F9F5D80C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -350,6 +351,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		160B3D378EEA8090F9F5D80C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NetworkDetector_Tests/Pods-NetworkDetector_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NetworkDetector-iOS/NetworkDetector.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NetworkDetector.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkDetector_Tests/Pods-NetworkDetector_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		383A03BC28AF59B33EDA9B69 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -677,7 +700,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetworkDetector_Example.app/NetworkDetector_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetworkDetector_iOS_Example.app/NetworkDetector_iOS_Example";
 			};
 			name = Debug;
 		};
@@ -692,7 +715,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetworkDetector_Example.app/NetworkDetector_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetworkDetector_iOS_Example.app/NetworkDetector_iOS_Example";
 			};
 			name = Release;
 		};
