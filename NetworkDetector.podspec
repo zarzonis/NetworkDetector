@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NetworkDetector'
-  s.version          = '0.3.0'
+  s.version          = '1.0.0'
   s.summary          = 'A simple library written in Swift that detects network changes.'
   s.description      = 'NetworkDetector detects network changes and calls a closure or broadcasts a notification based on the network status. It uses NWPathMonitor under the hood.'
 
