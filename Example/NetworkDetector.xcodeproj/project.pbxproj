@@ -24,7 +24,7 @@
 		B9C03AEF21BD990C00B1BD1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C03AEE21BD990C00B1BD1C /* AppDelegate.swift */; };
 		B9C03AF121BD990C00B1BD1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C03AF021BD990C00B1BD1C /* ViewController.swift */; };
 		B9C03AF421BD990C00B1BD1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C03AF221BD990C00B1BD1C /* Main.storyboard */; };
-		B9C03AF621BD990D00B1BD1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C03AF521BD990D00B1BD1C /* Assets.xcassets */; };
+		B9C03AFC21BD99FA00B1BD1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C03AFB21BD99FA00B1BD1C /* Images.xcassets */; };
 		C4C9FDBFC8A1390A8033774D /* Pods_NetworkDetector_macOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A98B065DB84D679626C60AD /* Pods_NetworkDetector_macOS_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,8 +74,8 @@
 		B9C03AEE21BD990C00B1BD1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9C03AF021BD990C00B1BD1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B9C03AF321BD990C00B1BD1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B9C03AF521BD990D00B1BD1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9C03AF721BD990D00B1BD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9C03AFB21BD99FA00B1BD1C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CE4BC9CFD063575A5F9F3FDD /* Pods-NetworkDetector_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDetector_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkDetector_Example/Pods-NetworkDetector_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E38D6974E551E010A3ED9A54 /* Pods-NetworkDetector_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDetector_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkDetector_Tests/Pods-NetworkDetector_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F59E7A3A40ACDD41BDD2C471 /* Pods-NetworkDetector_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDetector_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkDetector_Example/Pods-NetworkDetector_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 				B9C03AEE21BD990C00B1BD1C /* AppDelegate.swift */,
 				B9C03AF021BD990C00B1BD1C /* ViewController.swift */,
 				B9C03AF221BD990C00B1BD1C /* Main.storyboard */,
-				B9C03AF521BD990D00B1BD1C /* Assets.xcassets */,
+				B9C03AFB21BD99FA00B1BD1C /* Images.xcassets */,
 				B9C03AF721BD990D00B1BD1C /* Info.plist */,
 			);
 			path = "NetworkDetector-tvOS Example";
@@ -406,7 +406,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9C03AF621BD990D00B1BD1C /* Assets.xcassets in Resources */,
+				B9C03AFC21BD99FA00B1BD1C /* Images.xcassets in Resources */,
 				B9C03AF421BD990C00B1BD1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -862,6 +862,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -890,6 +891,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
