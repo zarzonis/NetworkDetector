@@ -25,7 +25,12 @@ An example project is included with this repo. To run the example project, clone
 
 ## Usage
 
+### Closures
+
+NOTE: All closures are run on the **main queue**.
+
 ```Swift
+//declare this property where it won't go out of scope relative to your listener
 let networkDetector = NetworkDetector()
 
 networkDetector.reachableHandler = {
@@ -41,7 +46,10 @@ do {
 } catch let error {
     print(error.localizedDescription)
 }
-
+```
+and for stopping notifications
+```swift
+networkDetector.stopMonitoring()
 ```
 
 ## Requirements
