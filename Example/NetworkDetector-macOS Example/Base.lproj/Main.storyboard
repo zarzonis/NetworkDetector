@@ -761,19 +761,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rzK-qP-70P">
-                                <rect key="frame" x="14" y="142" width="422" height="17"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="Uyz-1q-EKn">
-                                    <font key="font" usesAppearanceFont="YES"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M0l-ym-iG2">
+                                <rect key="frame" x="16" y="117" width="418" height="67"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ETZ-CT-oWg">
+                                        <rect key="frame" x="-2" y="33" width="422" height="34"/>
+                                        <textFieldCell key="cell" selectable="YES" alignment="center" title="Toggle the WiFi or the LTE on and off and notice the network status changes" id="GpJ-Oe-vmh">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rzK-qP-70P">
+                                        <rect key="frame" x="205" y="0.0" width="8" height="17"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="Uyz-1q-EKn">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="rzK-qP-70P" firstAttribute="leading" secondItem="0vT-lg-CV8" secondAttribute="leading" constant="16" id="2hA-XI-IqL"/>
-                            <constraint firstItem="rzK-qP-70P" firstAttribute="centerY" secondItem="0vT-lg-CV8" secondAttribute="centerY" id="M7F-2F-KWw"/>
-                            <constraint firstAttribute="trailing" secondItem="rzK-qP-70P" secondAttribute="trailing" constant="16" id="Tsw-vf-ZJn"/>
+                            <constraint firstAttribute="trailing" secondItem="M0l-ym-iG2" secondAttribute="trailing" constant="16" id="GWn-DK-KYs"/>
+                            <constraint firstItem="M0l-ym-iG2" firstAttribute="leading" secondItem="0vT-lg-CV8" secondAttribute="leading" constant="16" id="Tr2-U2-15f"/>
+                            <constraint firstItem="M0l-ym-iG2" firstAttribute="centerY" secondItem="0vT-lg-CV8" secondAttribute="centerY" id="ilJ-xa-g78"/>
                         </constraints>
                     </view>
                     <connections>
@@ -788,32 +809,53 @@
         <scene sceneID="Dxo-TA-IAI">
             <objects>
                 <viewController id="P19-MY-LAQ" customClass="NotificationsViewController" customModule="NetworkDetector_macOS_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="pzj-b6-zqx">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                    <view key="view" id="bui-9I-HsP">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="301"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZH3-y9-lEf">
-                                <rect key="frame" x="9" y="142" width="422" height="17"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="tCN-JN-UCD">
-                                    <font key="font" usesAppearanceFont="YES"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YNx-Td-ALA">
+                                <rect key="frame" x="16" y="117" width="418" height="67"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="laz-Cl-5Vq">
+                                        <rect key="frame" x="-2" y="33" width="422" height="34"/>
+                                        <textFieldCell key="cell" selectable="YES" alignment="center" title="Toggle the WiFi or the LTE on and off and notice the network status changes" id="LRL-Mu-phv">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Et-TR-I2p">
+                                        <rect key="frame" x="205" y="0.0" width="8" height="17"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="Nhw-bC-Vlj">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ZH3-y9-lEf" secondAttribute="trailing" constant="21" id="Wyl-Ug-8kO"/>
-                            <constraint firstItem="ZH3-y9-lEf" firstAttribute="leading" secondItem="pzj-b6-zqx" secondAttribute="leading" constant="11" id="q62-pA-Q7J"/>
-                            <constraint firstItem="ZH3-y9-lEf" firstAttribute="centerY" secondItem="pzj-b6-zqx" secondAttribute="centerY" id="qDe-db-UjV"/>
+                            <constraint firstItem="YNx-Td-ALA" firstAttribute="centerY" secondItem="bui-9I-HsP" secondAttribute="centerY" id="3dG-Rm-hyd"/>
+                            <constraint firstItem="YNx-Td-ALA" firstAttribute="leading" secondItem="bui-9I-HsP" secondAttribute="leading" constant="16" id="L9R-Cs-mkM"/>
+                            <constraint firstAttribute="trailing" secondItem="YNx-Td-ALA" secondAttribute="trailing" constant="16" id="tXl-ya-mg5"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="networkStatusTextField" destination="ZH3-y9-lEf" id="aEc-yH-JPr"/>
+                        <outlet property="networkStatusTextField" destination="0Et-TR-I2p" id="EvC-qT-D1v"/>
                     </connections>
                 </viewController>
                 <customObject id="ZqC-JJ-V2e" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="883"/>
+            <point key="canvasLocation" x="662" y="906"/>
         </scene>
     </scenes>
 </document>
