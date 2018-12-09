@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		314B2F84B9723349E1E68F37 /* Pods_NetworkDetector_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ECC9DFFBC9431005D27002 /* Pods_NetworkDetector_Tests.framework */; };
-		35D2597644B34D17211CB2F9 /* Pods_NetworkDetector_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1CA8F40FBDA8DBA87B6152 /* Pods_NetworkDetector_Example.framework */; };
 		4A5D320BDBCF891906D231F8 /* Pods_NetworkDetector_iOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703F73CA3E16EDC9E93B8DD7 /* Pods_NetworkDetector_iOS_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -77,7 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35D2597644B34D17211CB2F9 /* Pods_NetworkDetector_Example.framework in Frameworks */,
 				4A5D320BDBCF891906D231F8 /* Pods_NetworkDetector_iOS_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -721,7 +719,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.zarzonis.NetworkDetector-macOSExample.NetworkDetector-macOS-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.zarzonis.NetworkDetector-macOSExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -750,7 +748,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.zarzonis.NetworkDetector-macOSExample.NetworkDetector-macOS-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.zarzonis.NetworkDetector-macOSExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.2;

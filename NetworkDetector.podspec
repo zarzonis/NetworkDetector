@@ -25,4 +25,6 @@ Pod::Spec.new do |s|
   s.source_files = 'NetworkDetector/**/*.swift'
   
   s.framework    = 'Network'
+  
+  s.requires_arc = true
 end
