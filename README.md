@@ -21,7 +21,7 @@ pod 'NetworkDetector'
 
 ## Example
 
-An example project is included with this repo. To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Example projects for iOS, macOS, and tvOS are included with this repo. To run the example projects, clone the repo, and run `pod install` from the Example directory first.
 
 ## Usage
 
