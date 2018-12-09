@@ -21,6 +21,10 @@
 		B96B19CC21BD7EC70055C56A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B96B19CB21BD7EC70055C56A /* Assets.xcassets */; };
 		B96B19CF21BD7EC70055C56A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96B19CD21BD7EC70055C56A /* Main.storyboard */; };
 		B9C03AE721BD870100B1BD1C /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C03AE621BD870100B1BD1C /* NotificationsViewController.swift */; };
+		B9C03AEF21BD990C00B1BD1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C03AEE21BD990C00B1BD1C /* AppDelegate.swift */; };
+		B9C03AF121BD990C00B1BD1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C03AF021BD990C00B1BD1C /* ViewController.swift */; };
+		B9C03AF421BD990C00B1BD1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C03AF221BD990C00B1BD1C /* Main.storyboard */; };
+		B9C03AF621BD990D00B1BD1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C03AF521BD990D00B1BD1C /* Assets.xcassets */; };
 		C4C9FDBFC8A1390A8033774D /* Pods_NetworkDetector_macOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A98B065DB84D679626C60AD /* Pods_NetworkDetector_macOS_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +70,12 @@
 		B96B19D021BD7EC70055C56A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96B19D121BD7EC70055C56A /* NetworkDetector_macOS_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkDetector_macOS_Example.entitlements; sourceTree = "<group>"; };
 		B9C03AE621BD870100B1BD1C /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		B9C03AEC21BD990C00B1BD1C /* NetworkDetector_tvOS_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkDetector_tvOS_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9C03AEE21BD990C00B1BD1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B9C03AF021BD990C00B1BD1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B9C03AF321BD990C00B1BD1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B9C03AF521BD990D00B1BD1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9C03AF721BD990D00B1BD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE4BC9CFD063575A5F9F3FDD /* Pods-NetworkDetector_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDetector_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkDetector_Example/Pods-NetworkDetector_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E38D6974E551E010A3ED9A54 /* Pods-NetworkDetector_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDetector_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkDetector_Tests/Pods-NetworkDetector_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F59E7A3A40ACDD41BDD2C471 /* Pods-NetworkDetector_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDetector_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkDetector_Example/Pods-NetworkDetector_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +106,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9C03AE921BD990C00B1BD1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -116,6 +133,7 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* NetworkDetector-iOS Example */,
 				B96B19C621BD7EC70055C56A /* NetworkDetector-macOS Example */,
+				B9C03AED21BD990C00B1BD1C /* NetworkDetector-tvOS Example */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				BB119E3836B1E961919DD658 /* Pods */,
@@ -129,6 +147,7 @@
 				607FACD01AFB9204008FA782 /* NetworkDetector_iOS_Example.app */,
 				607FACE51AFB9204008FA782 /* NetworkDetector_Tests.xctest */,
 				B96B19C521BD7EC70055C56A /* NetworkDetector_macOS_Example.app */,
+				B9C03AEC21BD990C00B1BD1C /* NetworkDetector_tvOS_Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,6 +214,18 @@
 				B96B19D121BD7EC70055C56A /* NetworkDetector_macOS_Example.entitlements */,
 			);
 			path = "NetworkDetector-macOS Example";
+			sourceTree = "<group>";
+		};
+		B9C03AED21BD990C00B1BD1C /* NetworkDetector-tvOS Example */ = {
+			isa = PBXGroup;
+			children = (
+				B9C03AEE21BD990C00B1BD1C /* AppDelegate.swift */,
+				B9C03AF021BD990C00B1BD1C /* ViewController.swift */,
+				B9C03AF221BD990C00B1BD1C /* Main.storyboard */,
+				B9C03AF521BD990D00B1BD1C /* Assets.xcassets */,
+				B9C03AF721BD990D00B1BD1C /* Info.plist */,
+			);
+			path = "NetworkDetector-tvOS Example";
 			sourceTree = "<group>";
 		};
 		BB119E3836B1E961919DD658 /* Pods */ = {
@@ -273,6 +304,23 @@
 			productReference = B96B19C521BD7EC70055C56A /* NetworkDetector_macOS_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B9C03AEB21BD990C00B1BD1C /* NetworkDetector_tvOS_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9C03AFA21BD990D00B1BD1C /* Build configuration list for PBXNativeTarget "NetworkDetector_tvOS_Example" */;
+			buildPhases = (
+				B9C03AE821BD990C00B1BD1C /* Sources */,
+				B9C03AE921BD990C00B1BD1C /* Frameworks */,
+				B9C03AEA21BD990C00B1BD1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkDetector_tvOS_Example;
+			productName = "NetworkDetector-tvOS Example";
+			productReference = B9C03AEC21BD990C00B1BD1C /* NetworkDetector_tvOS_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -299,6 +347,11 @@
 						DevelopmentTeam = 26QSFXNK37;
 						ProvisioningStyle = Automatic;
 					};
+					B9C03AEB21BD990C00B1BD1C = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = 26QSFXNK37;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "NetworkDetector" */;
@@ -316,6 +369,7 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* NetworkDetector_iOS_Example */,
 				B96B19C421BD7EC70055C56A /* NetworkDetector_macOS_Example */,
+				B9C03AEB21BD990C00B1BD1C /* NetworkDetector_tvOS_Example */,
 				607FACE41AFB9204008FA782 /* NetworkDetector_Tests */,
 			);
 		};
@@ -345,6 +399,15 @@
 			files = (
 				B96B19CC21BD7EC70055C56A /* Assets.xcassets in Resources */,
 				B96B19CF21BD7EC70055C56A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9C03AEA21BD990C00B1BD1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9C03AF621BD990D00B1BD1C /* Assets.xcassets in Resources */,
+				B9C03AF421BD990C00B1BD1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +577,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9C03AE821BD990C00B1BD1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9C03AF121BD990C00B1BD1C /* ViewController.swift in Sources */,
+				B9C03AEF21BD990C00B1BD1C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -545,6 +617,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				B96B19CE21BD7EC70055C56A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B9C03AF221BD990C00B1BD1C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9C03AF321BD990C00B1BD1C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -778,6 +858,59 @@
 			};
 			name = Release;
 		};
+		B9C03AF821BD990D00B1BD1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 26QSFXNK37;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "NetworkDetector-tvOS Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.zarzonis.NetworkDetector-tvOSExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Debug;
+		};
+		B9C03AF921BD990D00B1BD1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26QSFXNK37;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "NetworkDetector-tvOS Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.zarzonis.NetworkDetector-tvOSExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -813,6 +946,15 @@
 			buildConfigurations = (
 				B96B19D321BD7EC70055C56A /* Debug */,
 				B96B19D421BD7EC70055C56A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9C03AFA21BD990D00B1BD1C /* Build configuration list for PBXNativeTarget "NetworkDetector_tvOS_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9C03AF821BD990D00B1BD1C /* Debug */,
+				B9C03AF921BD990D00B1BD1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
