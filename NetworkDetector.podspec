@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
   s.swift_version = '4.2'
 
   s.ios.deployment_target = '12.0'
+  s.osx.deployment_target = '10.14'
 
   s.source_files = 'NetworkDetector/**/*.swift'
   
