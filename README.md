@@ -8,7 +8,7 @@
 
 ## Description
 
-NetworkDetector is a very simple iOS library that detects network changes and calls a closure or broadcasts a notification based on the network status. NetworkDetector uses NWPathMonitor under the hood that introduced in iOS 12 and aims to eliminate the usage of Reachability class used for so many years. The library is inspired by Ashley Mills' [Reachability.swift](https://github.com/ashleymills/Reachability.swift), so the usage is similar even though it uses NWPathMonitor under the hood.
+NetworkDetector is a very simple library for iOS, macOS, and tvOS that detects network changes and calls a closure or broadcasts a notification based on the network status. NetworkDetector uses NWPathMonitor under the hood that introduced in iOS 12 and aims to eliminate the usage of Reachability class used for so many years. The library is inspired by Ashley Mills' [Reachability.swift](https://github.com/ashleymills/Reachability.swift), so the usage is similar even though it uses NWPathMonitor under the hood.
 
 ## Installation
 
